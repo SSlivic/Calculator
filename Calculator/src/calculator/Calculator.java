@@ -707,7 +707,9 @@ public class Calculator extends javax.swing.JFrame {
 
         
     private void memorizeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_memorizeMouseClicked
-        mr=Double.parseDouble(panel.getText()); 
+        
+                 mr=mr+Double.parseDouble(panel.getText()); 
+
         // TODO add your handling code here:
     }//GEN-LAST:event_memorizeMouseClicked
 
@@ -716,11 +718,13 @@ public class Calculator extends javax.swing.JFrame {
     }//GEN-LAST:event_memoryMouseClicked
 
     private void mMinusMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mMinusMouseClicked
-       mr=0;
+        double mrMInus = Double.parseDouble(panel.getText());
+       mr=mr-mrMInus;
+        /* mr=0;
         String mrMinus=String.valueOf(mr);
       panel.setText(mrMinus);
     }//GEN-LAST:event_mMinusMouseClicked
-
+*/
     private void percentMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_percentMouseClicked
        firstNumber=Double.parseDouble(panel.getText()); 
        panel.setText("");
@@ -728,11 +732,12 @@ public class Calculator extends javax.swing.JFrame {
     }//GEN-LAST:event_percentMouseClicked
 
     private void eraseMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_eraseMouseClicked
-       String p=panel.getText();
+     mr=0;
+         /* String p=panel.getText();
         
         String del=p.substring(0,p.length()-1);
        panel.setText(del);
-    }//GEN-LAST:event_eraseMouseClicked
+    }//GEN-LAST:event_eraseMouseClicked*/
 
     private void sinMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sinMouseClicked
         firstNumber=Double.parseDouble(panel.getText());
